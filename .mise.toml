@@ -7,6 +7,9 @@ maven = "3.9.4"
 # 例:
 # - Spring Boot アプリケーションを起動する: mise run sp-run
 
+# タスク一覧を確認する場合:
+# mise tasks ls
+
 [tasks.sp-run]
 description = 'Spring Bootアプリケーションを起動する'
 run = 'mvn spring-boot:run'
@@ -18,3 +21,8 @@ run = 'mvn formatter:validate'
 [tasks.format]
 description = 'main および test ディレクトリにある Java ファイルをフォーマットする'
 run = 'mvn formatter:format'
+
+[tasks.test]
+description = '全テスト(JUnit)を実行する'
+run = 'mvn test'
+
