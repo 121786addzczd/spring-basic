@@ -1,4 +1,4 @@
-package Spring01NoDI.repository;
+package Spring02DI.repository;
 
 import java.util.ArrayList;
 
