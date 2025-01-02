@@ -1,9 +1,9 @@
-package main.java;
+package main.java.helloEmployee;
 
 import java.util.ArrayList;
 
-import main.java.EmployeeListIF;
-import main.java.EmployeeListImpl;
+import main.java.helloEmployee.EmployeeListIF;
+import main.java.helloEmployee.EmployeeListImpl;
 
 public class HelloWorld {
 

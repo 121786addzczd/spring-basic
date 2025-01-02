@@ -5,53 +5,46 @@
 ### はじめに
 Javaはコンパイル型のプログラミング言語であり、ソースコードを実行する前にコンパイルが必要です。本ドキュメントでは、Javaファイルのコンパイルから実行までの手順を具体的に説明します。
 
-### ファイル構造
-以下のディレクトリ構造とファイル内容を想定しています。
-```markdown
-project/
-└── src/
-    └── main/
-        └── java/
-            └── HelloWorld.java
-```
-
-### HelloWorld.java の内容
-```java
-package main.java;
-
-public class HelloWorld {
-
-    public static void main(String[] args) {
-        System.out.println("Hello World");
-    }
-
-}
-```
 
 ### 手順
 1. **コンパイル**
 Javaファイルをコンパイルするには、javac コマンドを使用します。コンパイル時には、ソースコードが存在するディレクトリ構造を考慮する必要があります。
     ```bash
-    javac src/main/java/HelloWorld.java
+    javac -d bin src/main/java/helloEmployee/*.java
     ```
-    コンパイルが成功すると、以下のように HelloWorld.class ファイルが生成されます。
+    このコマンドでは、helloEmployee パッケージ内のすべてのJavaファイルを一括してコンパイルしています。
+
+    コンパイルが成功すると、以下のようなディレクトリ構造で .class ファイルが生成されます。これらのファイルは、元のJavaファイルの依存関係を反映した形でコンパイルされています。
     ```markdown
     project/
-    └── src/
+    └── bin/
         └── main/
             └── java/
-                ├── HelloWorld.java
-                └── HelloWorld.class
+                └── helloEmployee/
+                    ├── Employee.class
+                    ├── EmployeeListIF.class
+                    ├── EmployeeListImpl.class
+                    ├── EmployeeListImpl2.class
+                    └── HelloWorld.class
     ```
 
 2. **実行**
 コンパイルされた .class ファイルを実行するには、java コマンドを使用します。実行時には、src ディレクトリをクラスパスとして指定し、完全修飾クラス名を指定します。
     ```bash
-    java -cp src main.java.HelloWorld
+    java -cp bin main.java.helloEmployee.HelloWorld
     ```
     実行すると以下のように表示されれば一連の手順は完了です。
     ```shell
-    Hello World
+    --------------------------------------------
+    ID,名前,性別,年,住所
+    1,鈴木義雄,男性,1984,宮城県仙台市
+    2,大島咲希,女性,2004,福岡県福岡市
+    --------------------------------------------
+    ```
+
+    コンパイルと実行を同時に行う場合は以下のコマンドで可能です。
+    ```bash
+    javac -d bin src/main/java/helloEmployee/*.java ; java -cp bin main.java.helloEmployee.HelloWorld
     ```
 
 ## トラブルシューティング
