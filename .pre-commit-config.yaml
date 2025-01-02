@@ -1,0 +1,15 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+        name: 行末の不要な空白を削除する
+      - id: end-of-file-fixer
+        name: ファイル末尾に改行を追加する
+  - repo: local
+    hooks:
+      - id: format-java
+        name: Javaファイルをフォーマットする
+        entry: mise run format
+        language: system
+        pass_filenames: false

@@ -1,6 +1,7 @@
 [tools]
 java = "openjdk-17"
 maven = "3.9.4"
+pre-commit = "latest"
 
 # タスクの使用方法:
 # mise run <task_name>
@@ -26,3 +27,6 @@ run = 'mvn formatter:format'
 description = '全テスト(JUnit)を実行する'
 run = 'mvn test'
 
+[tasks.pre-commit-install]
+description = 'Git pre-commit フックをセットアップ'
+run = 'pre-commit install'
