@@ -1,4 +1,4 @@
-package Spring01NoDI.entity;
+package old.Spring01NoDI.entity;
 
 public class Employee {
 

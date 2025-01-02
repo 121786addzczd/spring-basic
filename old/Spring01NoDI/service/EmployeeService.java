@@ -1,9 +1,9 @@
-package Spring01NoDI.service;
-
-import Spring01NoDI.entity.Employee;
-import Spring01NoDI.repository.EmployeeRepository;
+package old.Spring01NoDI.service;
 
 import java.util.ArrayList;
+
+import old.Spring01NoDI.entity.Employee;
+import old.Spring01NoDI.repository.EmployeeRepository;
 
 public class EmployeeService {
     // 社員リストを取得

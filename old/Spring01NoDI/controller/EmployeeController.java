@@ -1,9 +1,9 @@
-package Spring01NoDI.controller;
+package old.Spring01NoDI.controller;
 
 import java.util.ArrayList;
 
-import Spring01NoDI.entity.Employee;
-import Spring01NoDI.service.EmployeeService;
+import old.Spring01NoDI.entity.Employee;
+import old.Spring01NoDI.service.EmployeeService;
 
 public class EmployeeController {
 

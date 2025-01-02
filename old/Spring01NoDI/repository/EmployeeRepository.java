@@ -1,8 +1,8 @@
-package Spring01NoDI.repository;
+package old.Spring01NoDI.repository;
 
 import java.util.ArrayList;
 
-import Spring01NoDI.entity.Employee;
+import old.Spring01NoDI.entity.Employee;
 
 public class EmployeeRepository {
 

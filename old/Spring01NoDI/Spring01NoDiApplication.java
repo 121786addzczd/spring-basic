@@ -1,8 +1,9 @@
-package Spring01NoDI;
+package old.Spring01NoDI;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import Spring01NoDI.controller.EmployeeController;
+
+import old.Spring01NoDI.controller.EmployeeController;
 
 @SpringBootApplication
 public class Spring01NoDiApplication {
