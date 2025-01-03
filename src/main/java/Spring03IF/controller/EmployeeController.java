@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import Spring02DI.entity.Employee;
-import Spring02DI.service.EmployeeService;
+import Spring03IF.entity.Employee;
+import Spring03IF.service.EmployeeService;
 
 @Controller
 public class EmployeeController {
