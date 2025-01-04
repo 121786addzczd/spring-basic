@@ -16,7 +16,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public ArrayList<Employee> findAll() {
-        return null;
+        return employeeRepository.findAll();
     }
 
 }
