@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; chareset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
   <head>
@@ -52,8 +53,13 @@
           <td>
             <select id="nen" name="nen" class="form-input" required>
               <option value="">選択してください</option>
-              <option value="2001">2001</option>
-              <option value="2002">2002</option>
+              <%
+              for (int year= 2000; year <= 2025; year++) {
+              %>
+              <option value="<%=year%>"><%=year%></option>
+              <%
+              }
+              %>
             </select>
           </td>
         </tr>
